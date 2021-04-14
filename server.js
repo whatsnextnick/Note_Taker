@@ -29,3 +29,14 @@ app.post("/api/notes", function(req, res) {
 
   res.send("Added new note!");
 });
+
+app.delete("/api/notes/:id", function(req, res) {
+  const id = req.params.id;
+  data.forEach((note, i) => {
+    if (note.id == id) {
+      data.splice(i, 1);
+    }
+  });
+
+  res.send("Deleted note!");
+});
