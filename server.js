@@ -40,3 +40,7 @@ app.delete("/api/notes/:id", function(req, res) {
 
   res.send("Deleted note!");
 });
+
+app.listen(PORT, function() {
+  console.log("Express listening to port " + PORT);
+});
